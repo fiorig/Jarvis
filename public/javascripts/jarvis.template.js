@@ -21,7 +21,23 @@ if ('webkitSpeechRecognition' in window) {
 
 	// object for speech recognition interface
 	var recognition = new webkitSpeechRecognition();
-
+	var canListen = true; 
+	recognition.continuous = false; 
+	recognition.interimResults = true; 
+	recognition.lang = 'en-US'; 
+	recognition.onstart = function() { 
+		console.log('Listening..');
+		$('.button').text(Listening...');
+		
+	} 
+	recognition.onresult = function () { 
+		
+	} 
+	recognition.onerror = function () { 
+		cinsole.log('ERROR'); 
+	} 
+	recognition.onend = function (event) { 
+	}
 	// IMPLEMENTATION
 }
 
